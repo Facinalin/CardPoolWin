@@ -76,8 +76,7 @@ export default {
   },
   methods: {
     checkLoggedIn () {
-      if (userToken && userId) {
-      } else {
+      if (!userToken || !userId) {
         Swal.fire({
           position: 'center',
           icon: 'error',
